@@ -1,0 +1,431 @@
+@media only screen and (min-width: 400px){
+    /*設定主頁面區塊bottom留50px給FOOTER*/
+    #main{
+        padding-bottom: 50px;
+    }
+
+    /*設定head區塊樣式及顏色等*/
+    #head{
+        border-style: ridge;
+        border-color: chartreuse;
+        border-width: 10px;
+        box-shadow:3px 3px 5px 6px #a16e6e;
+        font-size: 60px;
+        background-color: aqua;
+        color: brown;
+        text-align: center;
+    }
+    
+    /*設置tab顏色*/
+    #tab{
+        background: #1caa5d;
+        border: solid 1px #1caa5d;/*設置tab邊框*/
+    }
+    
+    /*消除ul li list產生的點*/
+    #tab>ul>li{
+        list-style-type: none;
+    }
+    
+    /*分頁連結設計*/
+    #tab>ul>li>a{
+        text-decoration: none;
+        font-size: 20px;
+        color: rgb(219, 209, 209);
+        float: left;/*橫向靠左排列*/
+        padding: 20px;/*內距*/
+        border-style: ridge;
+        border-width: 10px;
+        width: 20%;
+        background-color: coral;
+        text-align: center;
+        }
+    
+    /*分頁轉場動畫及其他設定*/
+    #t1,
+    #t2,
+    #t3,
+    #p1,
+    #p2,
+    #p3,
+    #p4,
+    #group_member1,
+    #group_member2{
+        clear:both;
+        height:0;
+        overflow:scroll;/*如果內容超出視窗範圍產生滾輪*/
+        visibility:hidden;
+        /*分頁轉場動畫*/
+        -webkit-transition:all .4s ease-in-out;
+        -moz-transition:all .4s ease-in-out;
+        -ms-transition:all .4s ease-in-out;
+        -o-transition:all .4s ease-in-out;
+        transition:all .4s ease-in-out;
+    }
+    
+    /*連結樣式設定*/
+    #tab-1:target ~ #tab > ul li a[href$="#tab-1"],
+    #tab-2:target ~ #tab > ul li a[href$="#tab-2"],
+    #tab-3:target ~ #tab > ul li a[href$="#tab-3"]{
+        background: rgb(41, 32, 97);
+        border-style: dashed;
+        border-width: 10px;
+    }
+
+    /*點擊連結後的分頁樣式設定*/
+    #tab-1:target ~ #tab > #t1,
+    #tab-2:target ~ #tab > #t2,
+    #tab-3:target ~ #tab > #t3,
+    #tab-4:target ~ #tab > #p1,
+    #tab-5:target ~ #tab > #p2,
+    #tab-6:target ~ #tab > #p3,
+    #tab-7:target ~ #tab > #p4,
+    #tab-8:target ~ #tab > #group_member1,
+    #tab-9:target ~ #tab > #group_member2{ 
+        visibility:visible;
+        height:800px;
+        background: rgb(250, 232, 172);
+    }
+
+    /*基本資料介紹的排版設計*/
+    #id{
+        height:100%;
+        color: rgb(143, 23, 23);
+        float: left;
+        font-size: 30px;
+        width:100%;
+    }
+
+    /*學術成果分頁的排版設計*/
+    #paper ul li{
+        border-style: double;
+        border-width: 20px;
+        font-size: 60px;
+        text-align: center;
+        background-color: #82b8f7;
+        list-style-image: url(ppp.png);
+        border-radius: 30%;
+        line-height: 150%;
+    }
+
+    /*消除連結底線*/
+    #paper>ul>li>a{
+        text-decoration: none;
+    }
+
+    /*學術成果內文的標題設計*/
+    #title{
+        font-size: 60px;
+        color: midnightblue;
+        text-align: center;
+        border-style: double;
+        background-color: crimson;
+        border-width: 20px;
+    }
+
+    /*文字陰影*/
+    #title>p{
+        text-shadow:2px 2px 2px #A8FF55;
+    }
+    
+    /*學術成果內文字體大小*/
+    #p1>ul>li>p,
+    #p2>ul>li>p,
+    #p3>ul>li>p,
+    #p4>ul>li>p{
+        font-size: 30px;
+    }
+
+    /*圖片位置設定*/
+    #imgg{
+        display:inline;
+        float: right;
+    }
+
+    /*分工按鈕位置設定*/
+    #bg{
+        position:absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%);
+    }
+
+    /*分工按鈕排列設定*/
+    #bg ul li{
+        list-style-type: none;       
+        float: left;
+    }
+
+    button {
+        /*按鈕外框*/
+        border-style: double;
+        border-width: 20px;
+        border-color: blue;
+        box-shadow: 0 0 0 2px white;
+
+        /*按鈕顏色*/
+        background: #e65c00;
+        background: -webkit-linear-gradient(to right, #F9D423, #e65c00); 
+        background: -webkit-gradient(linear, left top, right top, from(#F9D423), to(#e65c00)); 
+        background: -webkit-linear-gradient(left, #F9D423, #e65c00); 
+        background: -o-linear-gradient(left, #F9D423, #e65c00); 
+        background: linear-gradient(to right, #F9D423, #e65c00);
+        
+        /*按鈕相關設定*/
+        display: block;
+        padding: 10px 8px;
+        color: white;
+        font-weight: bold;
+        font-size: 50px;
+        text-align: center;
+        height: 200px;
+        width: 300px;
+        cursor: pointer;
+        position: relative;
+        letter-spacing: 10px;
+        overflow: hidden;
+        z-index: 1;
+
+        /*字體轉場動畫*/
+        transition: all .4s cubic-bezier(0.54, 0.09, 0.29, 0.9);
+        -webkit-transition: all .4s cubic-bezier(0.54, 0.09, 0.29, 0.9);
+        -moz-transition: all .4s cubic-bezier(0.54, 0.09, 0.29, 0.9);
+        -ms-transition: all .4s cubic-bezier(0.54, 0.09, 0.29, 0.9);
+        -o-transition: all .4s cubic-bezier(0.54, 0.09, 0.29, 0.9);
+      
+    }
+
+    /*當指標滑到按鈕上時*/
+    button:hover, button:focus{
+        color: #ff6d0b;
+        letter-spacing: 1.4px;
+        text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.59);
+    }
+
+    /*白色陰影的轉場*/
+    button span {
+        /*白色特效初始化*/
+        position: absolute;
+        display: block;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 0%;
+        height: 0%;
+        border-radius: 50%;
+        background: white;
+
+        /*特效轉場動畫*/
+        transition: width .4s cubic-bezier(0.54, 0.09, 0.29, 0.9), height .4s cubic-bezier(0.54, 0.09, 0.29, 0.9);
+        -webkit-transition: width .4s cubic-bezier(0.54, 0.09, 0.29, 0.9), height .4s cubic-bezier(0.54, 0.09, 0.29, 0.9);
+        -moz-transition: width .4s cubic-bezier(0.54, 0.09, 0.29, 0.9), height .4s cubic-bezier(0.54, 0.09, 0.29, 0.9); 
+        -ms-transition: width .4s cubic-bezier(0.54, 0.09, 0.29, 0.9), height .4s cubic-bezier(0.54, 0.09, 0.29, 0.9);
+        -o-transition: width .4s cubic-bezier(0.54, 0.09, 0.29, 0.9), height .4s cubic-bezier(0.54, 0.09, 0.29, 0.9);
+        z-index: -1
+    }
+
+    /*指到按鈕後調整陰影大小形成特效*/
+    button:hover span, button:focus span {
+        width: 400%;
+        height: 400%;
+    }
+
+    /*分工的分頁內容排版設計*/
+    #group_member1>p{
+        border-style: ridge;
+        border-color: rgb(65, 90, 39);
+        border-width: 10px;
+        font-size: 60px;
+        background-color: rgb(241, 245, 8);
+        color: rgb(0, 0, 0);
+        text-align: center;
+    }
+
+    #group_member1 ul li{
+        font-size: 60px;
+        border-style: ridge;
+        border-width: 10px;
+
+    }
+
+    #group_member2>p{
+        border-style: ridge;
+        border-color: rgb(65, 90, 39);
+        border-width: 10px;
+        font-size: 60px;
+        background-color: rgb(241, 245, 8);
+        color: rgb(0, 0, 0);
+        text-align: center;
+    }
+
+    #group_member2 ul li{
+        font-size: 60px;
+        border-style: ridge;
+        border-width: 10px;
+    }
+
+    /*老師信箱寄件功能*/
+    #mail{
+        font-size: 30px;
+        color: midnightblue;
+        text-align: center;
+        border-radius: 50%;
+        background-color: #81eeb2;
+        border-style: ridge;
+        border-width: 10px;
+        border-color: darkgoldenrod;
+        box-shadow:3px 3px 5px 6px #78ff1e;
+    }
+    
+    #footer{
+        text-align: center;
+        height: 50px;
+        position: relative;
+        margin-top: -50px;
+        width: 100%;
+        font-size: 20px;
+    }
+}
+
+
+/*以下為手機板*/
+@media only screen and (max-width: 400px){
+    #main{
+        padding-bottom: 50px;
+    }
+
+    #head{
+        border-style: ridge;
+        border-color: chartreuse;
+        border-width: 10px;
+        font-size: 30px;
+        background-color: aqua;
+        color: brown;
+        text-align: center;
+    }
+
+    #tab>ul>li{
+        height: 0;
+        visibility: hidden;
+        list-style-type: none;
+    }
+    
+
+    #t1{
+        border-style: ridge;
+        border-color: rgb(221, 136, 8);
+        border-width: 10px;
+        height: 300px;
+        overflow: scroll;
+        background-color: rgb(16, 204, 211);
+    }
+
+
+    #t2{
+        height: 0;
+        visibility: hidden;
+    }
+
+    #t3{
+        height: 0;
+        visibility: hidden;
+    }
+
+    
+
+    #p1{
+        color: rgb(255, 255, 255);
+        border-style: double;
+        border-color: rgb(115, 226, 5);
+        border-width: 10px;
+        height: 300px;
+        overflow: scroll;
+        background-color: rgb(45, 136, 83);
+    }
+    #p2{
+        color: rgb(255, 255, 255);
+        border-style: double;
+        border-color: rgb(4, 206, 233);
+        border-width: 10px;
+        height: 300px;
+        overflow: scroll;
+        background-color: rgb(119, 25, 107);
+    }
+    #p3{
+        border-style: double;
+        border-color: rgb(197, 23, 90);
+        border-width: 10px;
+        height: 150px;
+        overflow: scroll;
+        background-color: rgb(104, 240, 140);
+    }
+    #p4{
+        border-style: double;
+        border-color: rgb(4, 52, 184);
+        border-width: 10px;
+        height: 300px;
+        overflow: scroll;
+        background-color: blanchedalmond;
+    }
+
+    #imgg{
+        height:0;
+        visibility: hidden;
+    }
+
+    #group_member1>p{
+        border-style: ridge;
+        border-color: rgb(65, 90, 39);
+        border-width: 10px;
+        font-size: 30px;
+        background-color: rgb(241, 245, 8);
+        color: rgb(0, 0, 0);
+        text-align: center;
+    }
+
+    #group_member1 ul li{
+        font-size: 20px;
+        border-style: ridge;
+        border-width: 10px;
+        background-color: aliceblue;
+
+    }
+
+    #group_member2>p{
+        border-style: ridge;
+        border-color: rgb(65, 90, 39);
+        border-width: 10px;
+        font-size: 30px;
+        background-color: rgb(241, 245, 8);
+        color: rgb(0, 0, 0);
+        text-align: center;
+    }
+
+    #group_member2 ul li{
+        font-size: 20px;
+        border-style: ridge;
+        border-width: 10px;
+        background-color: aliceblue;
+    }
+
+    #mail{
+        font-size: 20px;
+        color: midnightblue;
+        text-align: center;
+        border-radius: 50%;
+        background-color: #81eeb2;
+        border-style: ridge;
+        border-width: 10px;
+        border-color: darkgoldenrod;
+        box-shadow:3px 3px 5px 6px #78ff1e;
+    }
+
+    #footer{
+        text-align: center;
+        height: 50px;
+        position: relative;
+        margin-top: -50px;
+        width: 100%;
+        font-size: 20px;
+    }
+}
